@@ -51,6 +51,8 @@ body
 		grid-template-columns: repeat(6, 1fr)
 		grid-gap: $gap - 5px
 		grid-template-areas: "wrapper" "info"		
+li
+	touch-action: manipulation
 header
 	grid-area: header
 	grid-column: span 12
@@ -132,7 +134,7 @@ header, footer
 	@media(max-width: $mobile)
 		grid-column-start: 1
 		grid-column-end: 4
-		font-size: 18px
+		font-size: 14px
 .wrapper
 	grid-area: wrapper
 	grid-column: span 8
@@ -153,7 +155,7 @@ header, footer
 		display: grid
 		grid-template-columns: repeat(6, 1fr)
 		grid-gap: $gap - 5px
-		grid-template-areas: "slider_up slider_up slider_up" "slider_down . arrows"
+		grid-template-areas: "slider_up slider_up" "slider_down slider_down"
 	.slider
 		display: inline-flex
 		direction: rtl
@@ -173,7 +175,7 @@ header, footer
 		@media(max-width: $tablet)
 			grid-column: span 5
 		@media(max-width: $mobile)
-			grid-column: span 5
+			grid-column: span 6
 .img
 	height: 200px
 	display: block
@@ -222,6 +224,8 @@ header, footer
 	grid-column: span 1
 	display: grid
 	padding: 0
+	@media(max-width: $mobile)
+		display: none
 	.arrow
 		max-height: $arrow_max
 		max-width: $arrow_max
@@ -235,9 +239,9 @@ header, footer
 			width: $arrow_max - 10px
 			height: $arrow_max - 10px
 	.btn_left
-		background-image: url("../assets/arrow-blue-left.png")
+		background-image: url("../arrow/arrow-blue-left.png")
 	.btn_right
-		background-image: url("../assets/arrow-blue-right.png")
+		background-image: url("../arrow/arrow-blue-right.png")
 		margin-top: -30px
 		@media(max-width: $laptop)
 			margin-top: -65px

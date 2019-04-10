@@ -67,6 +67,10 @@ body {
   }
 }
 
+li {
+  touch-action: manipulation;
+}
+
 header {
   grid-area: header;
   grid-column: span 12;
@@ -201,7 +205,7 @@ header, footer {
   .element {
     grid-column-start: 1;
     grid-column-end: 4;
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
@@ -233,7 +237,7 @@ header, footer {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 10px;
-    grid-template-areas: "slider_up slider_up slider_up" "slider_down . arrows";
+    grid-template-areas: "slider_up slider_up" "slider_down slider_down";
   }
 }
 .wrapper .slider {
@@ -268,7 +272,7 @@ header, footer {
 }
 @media (max-width: 640px) {
   .wrapper .slider_down {
-    grid-column: span 5;
+    grid-column: span 6;
   }
 }
 
@@ -352,6 +356,11 @@ header, footer {
   display: grid;
   padding: 0;
 }
+@media (max-width: 640px) {
+  .arrows {
+    display: none;
+  }
+}
 .arrows .arrow {
   max-height: 60px;
   max-width: 60px;
@@ -369,10 +378,10 @@ header, footer {
   }
 }
 .arrows .btn_left {
-  background-image: url("../assets/arrow-blue-left.png");
+  background-image: url("../arrow/arrow-blue-left.png");
 }
 .arrows .btn_right {
-  background-image: url("../assets/arrow-blue-right.png");
+  background-image: url("../arrow/arrow-blue-right.png");
   margin-top: -30px;
 }
 @media (max-width: 1440px) {
