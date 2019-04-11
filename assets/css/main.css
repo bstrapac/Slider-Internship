@@ -30,7 +30,6 @@ body {
   .container {
     max-width: calc(100vh - 30px);
     grid-template-columns: repeat(6, 1fr);
-    margin: 0 10px 0 10px;
   }
 }
 
@@ -198,7 +197,6 @@ header, footer {
     grid-column-start: 2;
     grid-column-end: 6;
     top: 40%;
-    font-size: 20px;
   }
 }
 @media (max-width: 640px) {

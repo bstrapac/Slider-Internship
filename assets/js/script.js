@@ -8,18 +8,18 @@ $('.btn_right').on('click', () =>
 	$('.slider_up').css({
 		position: 'relative',
 		right: image_width
-	}).animate(
+	}).stop(true).animate(
 		{
 			right: 0
-		}, 500
+		}, 100
 	);
 	$('.slider_down').css({
 		position: 'relative',
 		right: image_width
-	}).animate(
+	}).stop(true).animate(
 		{
 			right: 0
-		}, 500
+		}, 100
 	);
 });
 $('.btn_left').on('click', () => 
@@ -27,22 +27,22 @@ $('.btn_left').on('click', () =>
 	var image_up = $( ".slider_up li:last" );
 	var image_down = $( ".slider_down li:last" );
 	var image_width= image_up.width();
-	image_up.prependTo( ".slider_up");
+	image_up.detach().prependTo( ".slider_up");
 	image_down.detach().prependTo( ".slider_down");
 	$('.slider_up').css({
 		position: 'relative'
-	}).animate(
+	}).stop(true).animate(
 		{
 			right: image_width
-		}, 500, () => {
+		}, 100, () => {
 			$('.slider_up').css({right: 0})
 		});
 	$('.slider_down').css({
 		position: 'relative'
-	}).animate(
+	}).stop(true).animate(
 		{
 			right: image_width
-		}, 500, () => {
+		}, 100, () => {
 			$('.slider_down').css({right: 0})
-			});
+		});
 });
